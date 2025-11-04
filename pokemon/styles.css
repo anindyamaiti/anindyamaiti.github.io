@@ -1,0 +1,252 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b172a;
+  --surface: rgba(11, 23, 42, 0.85);
+  --surface-strong: rgba(14, 32, 61, 0.95);
+  --text: #edf1fb;
+  --accent: #ffcb05;
+  --accent-strong: #f57d31;
+  --correct: #37c871;
+  --incorrect: #ff6b6b;
+  --timer-bg: rgba(255, 255, 255, 0.15);
+  --radius: 18px;
+  font-family: "Archivo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(245, 125, 49, 0.4), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255, 203, 5, 0.5), transparent 45%),
+    #04070f;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.app-header {
+  padding: 2.5rem 1.5rem 1rem;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand:hover,
+.brand:focus {
+  color: var(--accent-strong);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 0;
+}
+
+.app {
+  flex: 1;
+  display: grid;
+  gap: 2rem;
+  padding: 0 1.5rem 3rem;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: start;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.game {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 30px 80px rgba(4, 12, 24, 0.45);
+  backdrop-filter: blur(18px);
+}
+
+.status-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.timer {
+  flex: 1;
+  min-width: 200px;
+  height: 0.75rem;
+  background: var(--timer-bg);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#timer-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-strong) 100%);
+  transition: width 0.2s ease-out;
+  width: 100%;
+}
+
+.pokemon-card {
+  background: var(--surface-strong);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.pokemon-card img {
+  width: min(200px, 60vw);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.35));
+  background: rgba(4, 7, 15, 0.35);
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.choices {
+  display: grid;
+  gap: 0.75rem;
+  margin-block: 1.5rem;
+}
+
+button {
+  appearance: none;
+  border: none;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.7;
+  transform: none;
+}
+
+button.correct {
+  background: rgba(55, 200, 113, 0.25);
+  color: #d9ffe5;
+  box-shadow: inset 0 0 0 2px var(--correct);
+}
+
+button.incorrect {
+  background: rgba(255, 107, 107, 0.25);
+  color: #ffe1e1;
+  box-shadow: inset 0 0 0 2px var(--incorrect);
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button.secondary {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.rules {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+.rules h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.rules ol {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: rgba(237, 241, 251, 0.7);
+}
+
+.app-footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 960px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .rules {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .game,
+  .rules {
+    padding: 1.5rem;
+  }
+
+  .scoreboard {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
