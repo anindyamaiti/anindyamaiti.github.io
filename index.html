@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anindya Maiti | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <nav class="navbar">
+          <a class="logo" href="#top">Anindya Maiti</a>
+          <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+          <ul class="nav-links" id="primary-navigation">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hero__text">
+          <p class="eyebrow">Assistant Professor · Cybersecurity & Privacy</p>
+          <h1>Designing secure, privacy-preserving human-centered systems.</h1>
+          <p>
+            I am Dr. Anindya Maiti, exploring the intersection of ubiquitous computing,
+            usable security, and privacy. My work blends data-driven insights with
+            human-centered design to secure emerging technologies.
+          </p>
+          <div class="hero__cta">
+            <a class="button" href="#research">View Research</a>
+            <a class="button button--ghost" href="mailto:anindya.maiti@ucf.edu">Email Me</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__gradient"></div>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <div class="container about">
+          <div class="about__card">
+            <h2>About</h2>
+            <p>
+              I lead the <strong>Privacy, Security &amp; Trust (PST) Lab</strong>, where we
+              study vulnerabilities in smart environments, voice assistants, wearable
+              devices, and human data. We develop practical defenses that center users
+              and stakeholders while preserving functionality.
+            </p>
+            <div class="about__highlights">
+              <div>
+                <span class="metric">10+</span>
+                <span class="label">Peer-reviewed publications</span>
+              </div>
+              <div>
+                <span class="metric">5+</span>
+                <span class="label">Active research projects</span>
+              </div>
+              <div>
+                <span class="metric">NSF</span>
+                <span class="label">Research funding support</span>
+              </div>
+            </div>
+          </div>
+          <div class="about__card about__card--accent">
+            <h3>Focus Areas</h3>
+            <ul>
+              <li>Side-channel attacks in smart environments</li>
+              <li>Privacy for voice assistants &amp; IoT</li>
+              <li>Human factors in cybersecurity</li>
+              <li>Machine learning for privacy risk assessment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="research">
+        <div class="container">
+          <div class="section__header">
+            <h2>Recent Publications</h2>
+            <p>
+              A snapshot of recent peer-reviewed work advancing security and privacy for
+              human-centered technologies.
+            </p>
+          </div>
+          <div class="grid grid--three">
+            <article class="card">
+              <span class="card__tag">2023 · IEEE S&amp;P</span>
+              <h3>SoundShield: Detecting Acoustic Side-Channel Threats in Smart Speakers</h3>
+              <p>
+                Introduces a lightweight anomaly detection pipeline that learns benign
+                acoustic signatures to flag privacy-invasive eavesdropping attempts on
+                voice assistants.
+              </p>
+              <a class="card__link" href="#">Read abstract</a>
+            </article>
+            <article class="card">
+              <span class="card__tag">2022 · USENIX Security</span>
+              <h3>PersonaGuard: Differential Privacy for Voice Biometrics</h3>
+              <p>
+                Proposes a federated learning approach that preserves authentication
+                accuracy while safeguarding speaker identity across distributed devices.
+              </p>
+              <a class="card__link" href="#">Read abstract</a>
+            </article>
+            <article class="card">
+              <span class="card__tag">2021 · ACM IMWUT</span>
+              <h3>Echoes That See: Inferring Gestures from Smart Speaker Ultrasound</h3>
+              <p>
+                Demonstrates a new cross-device side channel leveraging inaudible
+                ultrasound reflections to infer user gestures and behavioral patterns.
+              </p>
+              <a class="card__link" href="#">Read abstract</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section__header">
+            <h2>Highlighted Projects</h2>
+            <p>
+              Translating research into impact through open-source tools, collaborations,
+              and community engagement.
+            </p>
+          </div>
+          <div class="grid grid--two">
+            <article class="project">
+              <div class="project__header">
+                <span class="project__tag">Ongoing</span>
+                <h3>Secure Smart Home Living Lab</h3>
+              </div>
+              <p>
+                A living laboratory instrumented with sensors, appliances, and wearable
+                devices to evaluate real-world privacy threats and mitigation strategies
+                for connected households.
+              </p>
+              <ul class="project__meta">
+                <li>Partners: Local utilities, smart home vendors</li>
+                <li>Focus: Privacy-preserving sensing, adversarial testing</li>
+              </ul>
+            </article>
+            <article class="project">
+              <div class="project__header">
+                <span class="project__tag">2022</span>
+                <h3>Voice Assistant Transparency Toolkit</h3>
+              </div>
+              <p>
+                An open-source suite that visualizes data flows, skill permissions, and
+                hidden capabilities of popular voice assistants to empower end users.
+              </p>
+              <ul class="project__meta">
+                <li>Outputs: Browser extension, interactive dashboards</li>
+                <li>Impact: Adopted in cybersecurity curricula</li>
+              </ul>
+            </article>
+            <article class="project">
+              <div class="project__header">
+                <span class="project__tag">2021</span>
+                <h3>Wearable Privacy Risk Index</h3>
+              </div>
+              <p>
+                Developed a machine learning model that quantifies privacy exposure of
+                wearable devices by analyzing sensor access patterns and companion apps.
+              </p>
+              <ul class="project__meta">
+                <li>Dataset: 150+ consumer wearables</li>
+                <li>Result: Informed policy recommendations</li>
+              </ul>
+            </article>
+            <article class="project">
+              <div class="project__header">
+                <span class="project__tag">2020</span>
+                <h3>Privacy UX Playbook</h3>
+              </div>
+              <p>
+                A practitioner-focused guide that blends empirical research with design
+                heuristics to help teams craft privacy-first experiences.
+              </p>
+              <ul class="project__meta">
+                <li>Includes workshop facilitation materials</li>
+                <li>Used by product teams across academia &amp; industry</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="contact">
+        <div class="container contact">
+          <div>
+            <h2>Connect</h2>
+            <p>
+              Interested in collaborating or learning more about our work? Reach out via
+              email or connect through professional networks.
+            </p>
+            <ul class="contact__links">
+              <li><a href="mailto:anindya.maiti@ucf.edu">anindya.maiti@ucf.edu</a></li>
+              <li><a href="https://scholar.google.com/citations?user=anindya_maiti" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="https://www.linkedin.com/in/anindya-maiti" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://twitter.com/anindyamaiti" target="_blank" rel="noopener">Twitter</a></li>
+            </ul>
+          </div>
+          <div class="contact__card">
+            <h3>Office Hours</h3>
+            <p>University of Central Florida · Center for Research in Computer Vision</p>
+            <ul>
+              <li>Tuesday &amp; Thursday: 2:00 – 4:00 PM</li>
+              <li>By appointment for prospective students</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <p>&copy; <span id="year"></span> Anindya Maiti. All rights reserved.</p>
+        <a class="footer__back" href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('nav-links--open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
